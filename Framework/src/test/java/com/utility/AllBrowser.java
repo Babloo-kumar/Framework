@@ -15,17 +15,17 @@ public class AllBrowser
 	{
 		if(browserName.equals("Chrome"))
 		{
-			System.setProperty("webdriver.chrome.driver","E:/PwC/Framework/Driver/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver","C:/Users/Babloo/git/Framework/Framework/Driver/chromedriver.exe");
 			driver=new ChromeDriver();
 		}
 		else if(browserName.equals("Firefox"))
 		{
-			System.setProperty("webdriver.gecko.driver","E:/PwC/Framework/Driver/geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver","C:/Users/Babloo/git/Framework/Framework/Driver/geckodriver.exe");
 			driver=new FirefoxDriver();
 		}
 		else if(browserName.equals("IE"))
 		{
-			System.setProperty("webdriver.ie.driver","E:/PwC/Framework/Driver/IEDriverServer.exe");
+			System.setProperty("webdriver.ie.driver","C:/Users/Babloo/git/Framework/Framework/Driver/IEDriverServer.exe");
 			driver=new InternetExplorerDriver();
 		}
 		else
