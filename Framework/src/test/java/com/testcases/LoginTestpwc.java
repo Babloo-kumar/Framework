@@ -1,26 +1,27 @@
 package com.testcases;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 
+import com.pages.BaseClass;
 import com.pages.LoginPage;
-import com.utility.AllBrowser;
 
-public class LoginTestpwc 
+public class LoginTestpwc extends BaseClass
 
 {
-	WebDriver driver;
+
 	@Test
-	public void loginApp()
+	public void loginApp() throws InterruptedException
 	{
-		driver=AllBrowser.StartApplication(driver, "Chrome", "http://pwcpoc-1162719469.ap-south-1.elb.amazonaws.com/PwCEWB/Auth/Login");
+		
+		//excel.getStringData("Login", 0, 0);
 		
 		LoginPage loginPage=PageFactory.initElements(driver, LoginPage.class);
 		
-		loginPage.loginToPwC("Babloo_dev","Babloo@123");
+	   loginPage.loginToPwC(excel.getStringData("Login", 0, 0), excel.getStringData("Login", 0, 1));
+	   
+	   Thread.sleep(2000);
 		
-		AllBrowser.quitBrowser(driver);
 	}
 
 }

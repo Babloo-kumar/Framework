@@ -5,6 +5,8 @@
     <classes>
       <class name="com.testcases.LoginTestpwc">
         <methods>
+          <include name="closeBrowser"/>
+          <include name="setup"/>
           <include name="loginApp"/>
         </methods>
       </class> <!-- com.testcases.LoginTestpwc -->

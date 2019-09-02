@@ -12,8 +12,8 @@ public class LoginPage
 		this.driver=ldriver;
 	}
 
-	@FindBy(name="user_loginid") WebElement username;
-	@FindBy(name="password") WebElement pass;
+	@FindBy(xpath="//input[@id='username']") WebElement username;
+	@FindBy(xpath="//input[@id='password']") WebElement pass;
 	@FindBy(xpath="//button[@id='login']") WebElement loginButton;
 	
 	public void loginToPwC(String uname,String passwordApp)
